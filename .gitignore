@@ -1,0 +1,52 @@
+# QR Attendance Checker
+
+This project is a QR-based attendance system designed for classrooms or events.
+
+## How it works
+
+- The teacher creates a class session and generates a QR code.
+- The student scans the QR code using a mobile device or browser camera.
+- The system saves the attendance as `Present` in the SQLite database.
+- The teacher can check attendance records in real time.
+
+## Features
+
+- Teacher dashboard to create QR codes
+- Student scanner page to scan QR codes
+- Database storage using SQLite
+- Duplicate attendance prevention
+- QR code expiration for security
+
+## Requirements
+
+- Node.js 18+
+- npm
+
+## Setup
+
+1. Open the project in VS Code.
+2. Open the terminal and run:
+
+```bash
+npm install
+```
+
+3. Start the app:
+
+```bash
+npm start
+```
+
+4. Open these pages in the browser:
+
+- Teacher: http://localhost:3000/teacher
+- Student: http://localhost:3000/student
+
+## Notes
+
+This system follows the flow you requested:
+
+- Teacher generates the QR code.
+- Student scans it.
+- Attendance is saved as Present in the database.
+- No manual attendance entry is required.

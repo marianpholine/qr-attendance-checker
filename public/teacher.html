@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container small">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Teacher Panel</p>
+          <h1>Generate Attendance QR</h1>
+        </div>
+        <a class="btn btn-secondary" href="/">Back</a>
+      </header>
+
+      <main class="panel-grid">
+        <section class="card">
+          <h2>Class Details</h2>
+          <form id="attendance-form">
+            <div class="field-group">
+              <label for="className">Class Name</label>
+              <input id="className" name="className" type="text" placeholder="e.g. Computer Science 101" required />
+            </div>
+
+            <div class="field-group">
+              <label for="instructor">Teacher Name</label>
+              <input id="instructor" name="instructor" type="text" placeholder="e.g. Mr. Reyes" required />
+            </div>
+
+            <div class="split-row">
+              <div class="field-group">
+                <label for="date">Date</label>
+                <input id="date" name="date" type="date" required />
+              </div>
+              <div class="field-group">
+                <label for="location">Location</label>
+                <input id="location" name="location" type="text" placeholder="e.g. Room 204" required />
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary full-width">Generate QR Code</button>
+          </form>
+        </section>
+
+        <section class="card qr-card">
+          <h2>QR Code</h2>
+          <div id="qr-placeholder" class="qr-placeholder">
+            No QR code generated yet.
+          </div>
+          <img id="qr-image" class="qr-image hidden" alt="Attendance QR code" />
+          <div id="qr-meta" class="qr-meta hidden"></div>
+          <div class="qr-actions">
+            <button id="download-qr" class="btn btn-success hidden">Download</button>
+            <button id="print-qr" class="btn btn-secondary hidden">Print</button>
+          </div>
+        </section>
+      </main>
+
+      <section class="card attendance-card">
+        <h2>Attendance List</h2>
+        <div id="attendance-list" class="attendance-list">
+          <p>No records yet.</p>
+        </div>
+      </section>
+    </div>
+
+    <script src="teacher.js"></script>
+  </body>
+</html>

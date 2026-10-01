@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Scanner</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  </head>
+  <body>
+    <div class="container small">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Student Access</p>
+          <h1>Scan QR to Mark Present</h1>
+        </div>
+        <a class="btn btn-secondary" href="/">Back</a>
+      </header>
+
+      <main class="scanner-layout">
+        <section class="card scanner-card">
+          <div id="reader" class="reader"></div>
+          <div class="scanner-actions">
+            <button id="start-scan" class="btn btn-primary">Start Camera</button>
+            <button id="stop-scan" class="btn btn-secondary hidden">Stop Camera</button>
+          </div>
+        </section>
+
+        <section class="card result-card">
+          <h2>Check-in Result</h2>
+          <div id="status-box" class="status-box neutral">
+            <p>Waiting for a QR code scan.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="student.js"></script>
+  </body>
+</html>

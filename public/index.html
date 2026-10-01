@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Attendance System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Attendance Management</p>
+          <h1>QR Attendance System</h1>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/teacher">Teacher</a>
+          <a class="btn btn-success" href="/student">Student</a>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="card">
+          <h2>How the system works</h2>
+          <ol class="steps">
+            <li>The teacher generates a unique QR code for a class or event.</li>
+            <li>The student scans the QR code using the scanner page.</li>
+            <li>The attendance is saved in the database as Present.</li>
+            <li>The teacher can review the attendance list in real time.</li>
+          </ol>
+        </section>
+
+        <section class="card">
+          <h2>Key features</h2>
+          <ul class="feature-list">
+            <li>No manual attendance entry</li>
+            <li>Teacher-controlled QR generation</li>
+            <li>Attendance stored in SQLite</li>
+            <li>Prevents duplicate check-ins</li>
+            <li>QR expires after a set time</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
